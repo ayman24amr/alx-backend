@@ -37,7 +37,7 @@ def before_request():
     """finds a user if any, and set it as a global on flask.g.user"""
     id = request.args.get('login_as', 0)
     setattr(g, 'user', get_user(id))
-    
+
 
 @babel.localeselector
 def get_locale():
